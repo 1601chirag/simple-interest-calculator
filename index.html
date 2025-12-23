@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Interest Calculator</title>
+</head>
+<body>
+  <h3>Simple Interest Calculator</h3>
+
+  <label>Principal (₹)</label><br>
+  <input type="number" id="p"><br><br>
+
+  <label>Rate (%)</label><br>
+  <input type="number" id="r"><br><br>
+
+  <label>Time (years)</label><br>
+  <input type="number" id="t"><br><br>
+
+  <button onclick="calcSI()">Calculate</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calcSI() {
+      var p = document.getElementById("p").value;
+      var r = document.getElementById("r").value;
+      var t = document.getElementById("t").value;
+      var si = (p * r * t) / 100;
+      document.getElementById("result").innerHTML =
+        "Simple Interest = ₹" + si;
+    }
+  </script>
+</body>
+</html>
